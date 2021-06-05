@@ -158,7 +158,7 @@ fetch('matches')
     statsContainer.id = 'stats';
     statsContainer.innerHTML += `
     <div id='wr-circle'>
-        <h3>${stats.wins / (stats.wins + stats.losses) * 100}%</h3>
+        <h3>${(stats.wins / (stats.wins + stats.losses) * 100).toFixed(0)}%</h3>
         <svg id='wr'>
             <circle cx='50%' cy="50%" r="45%"/>
             <circle cx="50%" cy="50%" r="45%" stroke-dashoffset="${340 * stats.wins / (stats.wins + stats.losses)}"/>
@@ -187,7 +187,7 @@ fetch('matches')
             divContainer.innerHTML += `
             <figure>
                 <img src='assets/lanes/${bestLane}.png'/>
-                <figcaption>${gamesAmount / (stats.wins + stats.losses) * 100}%</figcaption>
+                <figcaption>${(gamesAmount / (stats.wins + stats.losses) * 100).toFixed(0)}%</figcaption>
             </figure>
             `;
         }
