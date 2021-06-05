@@ -2,4 +2,3 @@ node_modules/
 matches/*
 !matches/.gitkeep
 .env
-static3
