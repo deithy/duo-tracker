@@ -1,0 +1,291 @@
+@font-face {
+	font-family: 'CircularStd';
+	src: url('font/CircularStd-Book.eot');
+	src: url('font/CircularStd-Book.woff2') format('woff2'),
+    url('font/CircularStd-Book.woff') format('woff'),
+    url('font/CircularStd-Book.ttf') format('truetype');
+}
+body {
+    font-family: 'CircularStd';
+    margin: 0;
+    --hover-grey: #808080;
+    --border: #e6e6e6;
+    --red: #e56653;
+    --green: #60aca0;
+    --purple: #8c51c5;
+
+    max-width: 1360px;
+    margin: 50px auto;
+    display: grid;
+    row-gap: 40px;
+    justify-items: center;
+}
+/*PLayer section*/
+.player {
+    grid-row-start: 1;
+}
+.player > h1 {
+    text-align: center;
+}
+.tier {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.tier > img {
+    width: 150px;
+}
+.tier > div {
+    margin-left: 15px;
+}
+.tier > div > p, .tier > div > h1 {
+    margin: 0 0 5px 0;
+}
+.tier > div > p:first-of-type {
+    color: var(--hover-grey);
+}
+.top-champ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-champ div {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.champ-desc {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.champ-desc > p {
+    margin-top: 5px;
+}
+.top-champ img {
+    border-radius: 50%;
+    width: 60px;
+}
+.top-champ > div:first-of-type {
+    order: 1;
+}
+.top-champ > div:last-of-type {
+    order: 3;
+}
+.top-champ > div:first-of-type > img {
+    width: 80px;
+}
+/*Stats section*/
+#stats {
+    grid-row-start: 2;
+    grid-column: 1 / 3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#wr-circle {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#wr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#wr > circle {
+    stroke: var(--red);
+    stroke-width: 10px;
+    fill: transparent;
+    stroke-dasharray: 340px;
+}
+#wr > circle:first-of-type {
+    stroke: var(--green);
+    stroke-dasharray: 0px;
+}
+.player-stats {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+.player-stats > p:first-of-type {
+    width: 120px;
+    text-align: right;
+}
+.player-stats > p:nth-of-type(2) {
+    width: 120px;
+    text-align: center;
+}
+.lanes {
+    display: flex;
+    margin-right: 15px;
+    width: 230px;
+}
+figure {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+.recent-champs {
+    margin-left: 15px;
+    display: flex;
+    max-width: 520px;
+    flex-wrap: wrap;
+}
+.recent-champs img {
+    border-radius: 50%;
+    width: 32px;
+}
+.recent-champs figcaption {
+    margin-left: 4px;
+}
+.recent-champs > figure {
+    width: 48px;
+}
+
+/*Match history section*/
+#match-history {
+    grid-row-start: 3;
+    grid-column: 1 / 3;
+    width: 100%;
+}
+.match {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+.match > div:first-of-type {
+    width: 15px;
+    height: 80%;
+    background-color: var(--red);
+}
+.match > div:nth-of-type(2) {
+    margin: 0px 20px;
+    width: 130px;
+}
+.match > div:last-of-type {
+    width: 100px;
+}
+.match p {
+    text-align: center;
+}
+.main-participants > div {
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+    font-size: 1.1rem;
+}
+.main-champ {
+    position: relative;
+}
+.main-champ > img {
+    width: 46px;
+    border-radius: 50%;
+}
+.main-champ > div {
+    color: white;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    bottom: 2px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    height: 17px;
+    width: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-participants > div > p {
+    width: 60px;
+}
+.main-participants > div > p:first-of-type {
+    margin-left: 15px;
+}
+.participants {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 125px;
+    margin-left: auto;
+}
+.participants > div {
+    height: 21px;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    margin: 2px 0px;
+    width: 150px;
+}
+.participants > div > img {
+    width: 21px;
+    margin-right: 5px;
+}
+.items {
+    display: flex;
+    margin-right: 15px;
+}
+.items > div, .spells > div, .items > img, .spells > img {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+    background-color: var(--border);
+}
+.spells {
+    display: flex;
+    margin-right: 15px;
+}
+.runes {
+    position: relative;
+    margin: 0px 30px 0px 15px;
+    height: 32px;
+}
+.runes > img {
+    
+    width: 32px;
+    
+    border-radius: 50%;
+}
+.runes > img:last-of-type {
+    width: 15px;
+    padding: 2px;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+}
+.labels {
+    margin: auto;
+}
+.labels > div {
+    padding: 3px 7px;
+    color: white;
+    font-size: 0.7rem;
+    border-radius: 10px;
+    width: fit-content;
+    background-color: var(--red);
+    margin-bottom: 3px;
+}
+
+
+/*Global*/
+.green {
+    background-color: var(--green) !important;
+    color: white;
+}
+.purple {
+    background-color: var(--purple) !important;
+    color: white;
+}
+p {
+    margin: 0
+}
