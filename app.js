@@ -13,10 +13,8 @@ const players = [new Player('Shibumi'), new Player('Sleepy%20Blade')];
 //Frontend
 app.use(express.static('static'));
 
-//Log backend traffic
-app.use(log);
-
 //Backend
+app.use(log);
 app.get('/stats', async (req, res) => {
     let response = [{
         ...await players[0].rank(), champs: await players[0].champs()
